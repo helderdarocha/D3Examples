@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moons</title>
+    <script src="../d3/d3.min.js"></script>
+    <style>
+        circle {
+            fill: orange;
+            opacity: 1
+        }
+        text {
+            font-size: 8pt;
+            font-family: sans-serif;
+            fill: white;
+        }
+        svg {
+            border: solid red 1px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Worlds larger than MK2 (satellite of Makemake)</h1>
+    <script>
+        var width = 1000;
+        var height = 12800;
+        var space = 15;
+
+        d3.json("data/sol_2016.json", function(data) {
+            console.log(data)
+            drawObjects(d3.merge([data.planets, data.tnos, data.asteroids, data.centaurs]));
+        });
+
+        var drawObjects = function(planets) {
+            console.log(planets);
+
+            var satellites = [];
+            planets.forEach(function(d) {
+                if(d.satellites) {
+                    d.satellites.forEach(function(e) {
+                        console.log(d.name)
+                        e["planet"] = d.name;
+                    });
+                    satellites = d3.merge([satellites, d.satellites]);
+                }
+            });
+
+            var objects = d3.merge([planets, satellites]).filter(function(d) { return d.diameterKm >= 175; });
+
+            objects.sort(function(a, b) {
+                 return d3.descending(a.diameterKm, b.diameterKm);
+            })
+
+            var scale_d = d3.scale.linear()
+                    .domain([0, d3.max(objects, function(d) {return d.diameterKm})])
+                    .range([0,width * .8 - space]);
+
+            console.log(scale_d(3000))
+
+            var scale_n = d3.scale.linear()
+                    .domain([0, d3.sum(objects, function(d) {return d.diameterKm})])
+                    .range([space, height - objects.length * space]);
+
+            var coord_n = function(d, i) {
+                var previousDiameters = d3.sum(objects, function(d, j) {
+                    if (j < i) return d.diameterKm;
+                })
+                return space + i * space + scale_d(d.diameterKm/2) + scale_d(previousDiameters);
+            }
+
+            var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
+
+            var dwarf = new Set(["Ceres", "Pluto", "Eris", "Makemake", "Haumea"]);
+
+            var circles = svg.selectAll("circle")
+                    .data(objects)
+                    .enter()
+                    .append("circle")
+                    .attr("r", function(d) {return scale_d(d.diameterKm/2)})
+                    .attr("cx", width/2)
+                    .attr("cy", function(d, i) {return coord_n(d, i);})
+                    .style("fill", function(d) {
+                        if(d.category == "gaseous") return "orange";
+                        if(d.category == "rocky")   return "forestgreen";
+                        if(dwarf.has(d.name))   return "red";
+                        if(d.planet)   return "deepskyblue";
+                        return "pink";
+                    });
+
+            var names = svg.selectAll("text.name")
+                    .data(objects)
+                    .enter()
+                    .append("text").attr("class", "name")
+                    .text(function(d) {
+                        if(dwarf.has(d.name)) {
+                            return d.name + " (Dwarf planet)"
+                        } else if(d.semiMajorAxisAU > 30.1) {
+                            return d.name + " " + (d.designation == d.name ? "" : d.designation) + " (Trans-neptunian asteroid)";
+                        } else if (d.semiMajorAxisAU > 1.52 && d.semiMajorAxisAU < 5.2) {
+                            return d.name + " (Main belt asteroid)";
+                        } else if (d.planet) {
+                            return d.name + " (Satellite of " + d.planet + ")";
+                        } else return d.name;
+                    })
+                    .attr("x", function(d) {
+                        return width/2 + scale_d(d.diameterKm/2) + 20;
+                    })
+                    .attr("y", function(d, i) {return  coord_n(d, i);});
+
+            var diameters = svg.selectAll("text.diameter")
+                    .data(objects)
+                    .enter()
+                    .append("text").attr("class", "diameter")
+                    .style("text-anchor", "end")
+                    .text(function(d) {
+                        return d.diameterKm + " km";
+                    })
+                    .attr("x", function(d) {
+                        return width/2 - scale_d(d.diameterKm/2) - 20;
+                    })
+                    .attr("y", function(d, i) {return  coord_n(d, i);});
+
+            console.log(circles)
+        }
+
+    </script>
+</body>
+</html>

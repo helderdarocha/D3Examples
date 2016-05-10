@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../d3/d3.js"></script>
+</head>
+<body>
+
+<div id="list1">
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="list2">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="list3">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="list4">
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="planets1">
+    <ul>
+        <li>Sun</li>
+    </ul>
+</div>
+
+<div id="planets2">
+    <ul>
+        <li>Sun</li>
+    </ul>
+</div>
+
+<div id="planets3">
+    <ul>
+        <li>Sun</li>
+    </ul>
+</div>
+
+<script>
+    var dataset = [
+        {"planet": "Mercury", "diameter": 4800},
+        {"planet": "Venus", "diameter": 12100},
+        {"planet": "Earth", "diameter": 12700},
+        {"planet": "Mars", "diameter": 6700},
+        {"planet": "Jupiter", "diameter": 140000},
+        {"planet": "Saturn", "diameter": 116000},
+        {"planet": "Uranus", "diameter": 51000},
+        {"planet": "Neptune", "diameter": 49000}
+    ];
+
+    // SELECT
+
+    d3.select("#list1 ul")
+            .selectAll("li")
+            .data([10, 20, 5, 1])
+            .text(function(d) {
+                return d;
+            });
+
+    d3.select("#list2 ul")
+            .selectAll("li")
+            .data([100, 200])
+            .text(function(d) {
+                return d;
+            });
+
+    var li3 = d3.select("#list3 ul")
+            .selectAll("li")
+            .data([100, 200])
+            .text(function(d) {
+                return d;
+            });
+
+    var li3exit = li3.exit();
+
+    console.log("li3", li3);
+    console.log("li3exit", li3exit);
+
+    li3exit.remove(); // will remove blank spaces
+
+    var li4 = d3.select("#list4 ul")
+            .selectAll("li")
+            .data([70,40,23,12,56,44]); // blank because no text added
+
+    var li4enter = li4.enter();
+
+    console.log("li4",li4);
+    console.log("li4enter",li4enter);
+
+    li4enter.append("li")
+            .text(function(d) {
+                return d;
+            });
+
+    var li4exit = li4.exit();
+
+    console.log("li4exit",li4exit);
+
+    li4exit.remove(); // nothing to remove
+
+
+    /////
+
+
+    d3.select("#planets1 ul")
+            .selectAll("li")
+            .data(dataset)
+            .text(function(d) {
+                return d.planet;
+            });
+
+    d3.select("#planets2 ul")
+            .selectAll("li")
+            .data(dataset)
+            .enter().append("li")
+            .text(function(d) {
+                return d.planet;
+            });
+
+    d3.select("#planets3 ul li")
+            .selectAll("li")
+            .data(dataset)
+            .enter().append("li")
+            .text(function(d) {
+                return d.planet;
+            });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/d3/build/d3.js"></script>
+</head>
+<body>
+
+<p id="p1">One</p>
+<p id="p2">Two</p>
+
+<div>
+    <ul>
+        <li>This is a <b>bold</b> line.</li>
+        <li>This is an <i>italic</i> line.</li>
+        <li>This is a plain line.</li>
+    </ul>
+</div>
+
+<ol>
+    <li>This is unselected text</li>
+</ol>
+
+<script>
+    var dataset = [
+        {"planet": "Mercury", "diameter": 4800},
+        {"planet": "Venus", "diameter": 12100},
+        {"planet": "Earth", "diameter": 12700},
+        {"planet": "Mars", "diameter": 6700},
+        {"planet": "Jupiter", "diameter": 140000},
+        {"planet": "Saturn", "diameter": 116000},
+        {"planet": "Uranus", "diameter": 51000},
+        {"planet": "Neptune", "diameter": 49000}
+    ];
+
+    var firstPara = d3.select("p");
+
+    console.log(firstPara);
+
+    firstPara.on("mouseover", function() {
+                d3.select(this).style("color", "red");
+            });
+
+    var allParas = d3.selectAll("p");
+
+    console.log(allParas);
+
+    allParas.on("click", function() {
+        d3.select(this).style("font-size", "24pt");
+    })
+
+    var nodes = document.getElementsByTagName("p");
+
+    d3.selectAll(nodes).style("font-family", "sans-serif");
+
+    var div = d3.select("div");
+
+    console.log(div);
+
+    var ul = div.select("ul");
+
+    console.log(ul);
+
+    ul.selectAll("li").on("click", function(d) {
+        d3.select(this).style("text-decoration", "underline");
+    })
+
+    var ol = div.selectAll("ol"); // does not exist
+
+    console.log(ol);
+    console.log(ol.empty());
+    div.append("ol");
+    console.log(div.selectAll("ol").empty());
+    console.log(d3.selectAll("ol, ul"))
+
+    d3.selectAll("ol, ul").selectAll("li")
+            .data(dataset)
+            .enter()
+            .append("li")
+            .text(function(d) {
+                return d.planet;
+            });
+
+</script>
+
+</body>
+</html>
