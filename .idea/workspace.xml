@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97821190-e50f-45bf-af76-4a0f9a5dd0ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlanetaryData/moons.html" afterPath="$PROJECT_DIR$/PlanetaryData/moons.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlanetaryData/planets.html" afterPath="$PROJECT_DIR$/PlanetaryData/planets.html" />
     </list>
     <ignored path="D3Examples.iws" />
@@ -38,8 +37,30 @@
       <file leaf-file-name="planets.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlanetaryData/planets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="170" column="18" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
+            <state relative-caret-position="269">
+              <caret line="312" column="41" selection-start-line="312" selection-start-column="41" selection-end-line="312" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jupiter.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlanetaryData/data/jupiter.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sol_2016.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlanetaryData/data/sol_2016.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-465">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,7 +119,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="234" />
+    <option name="x" value="235" />
     <option name="y" value="23" />
     <option name="width" value="985" />
     <option name="height" value="868" />
@@ -280,15 +301,15 @@
       <workItem from="1462496669888" duration="23219000" />
       <workItem from="1462652117100" duration="1816000" />
       <workItem from="1462855038128" duration="900000" />
-      <workItem from="1462915229249" duration="5612000" />
+      <workItem from="1462915229249" duration="16472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31547000" />
+    <option name="totallyTimeSpent" value="42407000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="234" y="23" width="985" height="868" extended-state="0" />
+    <frame x="235" y="23" width="985" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24974619" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -326,22 +347,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-sets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-operators.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-nesting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -715,11 +720,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PlanetaryData/data/sol_2016.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlanetaryData/data/jupiter.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PlanetaryData/planets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="170" column="18" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="269">
+          <caret line="312" column="41" selection-start-line="312" selection-start-column="41" selection-end-line="312" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
