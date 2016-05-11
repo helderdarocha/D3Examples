@@ -5,11 +5,6 @@
     <title>Worlds that are larger than the moon of Makemake</title>
     <script src="../d3/d3.min.js"></script>
     <style>
-        circle {
-            fill: white;
-            opacity: 1
-        }
-
         text {
             font-size: 10pt;
             font-family: sans-serif;
@@ -164,6 +159,16 @@
         }
     };
 
+    var colors = {
+        "gaseous": "orange",
+        "rocky": "forestgreen",
+        "centaur": "lightgray",
+        "dwarf": "olive",
+        "satellite": "coral",
+        "tno": "gray",
+        "asteroid": "deepskyblue"
+    };
+
     var showInfo = function (d, i) {
         var info = d3.select("#info");
         var table = info.select("table tbody");
@@ -296,6 +301,47 @@
                 .append("svg")
                 .attr("viewBox", "0 0 " + width + " " + height);
 
+        var defs = svg.append("defs");
+
+        var circleTemplate = {
+                cx: function(d)    { return width/2; },
+                cy: function(d, i) { return coord_n(d, i); },
+                r:  function(d)    { return scale_d(d.diameterKm / 2); }
+        };
+
+
+        var gradient = defs.selectAll("radialGradient")
+                .data(objects)
+                .enter()
+                .append("radialGradient")
+                .attr("cx", .2).attr("cy", .3).attr("r", .9)
+                .attr("id", function (d) {
+                    return "gradient-" + d.id.replace(/\./g, "_");
+                });
+        gradient.append("stop")
+                .attr("stop-color", function(d) {
+                    return d3.hsl(colors[category(d)]).brighter();
+                })
+                .attr("offset", "0%")
+        gradient.append("stop")
+                .attr("stop-color", function(d) {
+                    return colors[category(d)];
+                })
+                .attr("offset", "33%")
+                .attr("stop-opacity", .8)
+        gradient.append("stop")
+                .attr("stop-color", function(d) {
+                    return d3.hsl(colors[category(d)]).darker();
+                })
+                .attr("offset", "66%")
+                .attr("stop-opacity", .6)
+        gradient.append("stop")
+                .attr("stop-color", function(d) {
+                    return d3.hsl(colors[category(d)]).darker().darker();
+                })
+                .attr("offset", "100%")
+                .attr("stop-opacity", .1);
+
         var entries = svg
                 .selectAll(".entry")
                 .data(objects)
@@ -307,15 +353,12 @@
                 .attr("class", "entry");
 
         entries.append("circle")
-                .attr("r", function (d) {
-                    return scale_d(d.diameterKm / 2)
-                })
-                .attr("cx", width / 2)
-                .attr("cy", function (d, i) {
-                    return coord_n(d, i);
-                })
-                .attr("class", function(d) {
-                    return "circle " + category(d);
+                .attr(circleTemplate)
+                //.attr("class", function(d) {
+                //    return "circle " + category(d);
+                //})
+                .attr("fill", function(d,i) {
+                    return "url(#gradient-" + d.id.replace(/\./g, "_") + ")";
                 });
 
         entries.append("text")
