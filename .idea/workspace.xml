@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97821190-e50f-45bf-af76-4a0f9a5dd0ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PlanetaryData/mass_piechart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlanetaryData/mass_piechart.html" afterPath="$PROJECT_DIR$/PlanetaryData/mass_piechart.html" />
     </list>
     <ignored path="D3Examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="mass_piechart.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlanetaryData/mass_piechart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+            <state relative-caret-position="104">
+              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -283,12 +282,12 @@
       <workItem from="1462982678992" duration="4999000" />
       <workItem from="1462993803105" duration="920000" />
       <workItem from="1463002950744" duration="4451000" />
-      <workItem from="1463076209757" duration="22557000" />
+      <workItem from="1463076209757" duration="24034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76045000" />
+    <option name="totallyTimeSpent" value="77522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="246" y="23" width="1067" height="868" extended-state="0" />
@@ -450,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlanetaryData/mass_piechart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+        <state relative-caret-position="104">
+          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
           <folding />
         </state>
       </provider>

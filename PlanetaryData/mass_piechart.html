@@ -46,7 +46,7 @@
         viewBox: "0 0 " + width + " " + height
     };
 
-    var colors = d3.scale.category10();
+    var colors = d3.scale.category20c();
 
     var svg = d3.select("body")
             .append("div").attr(dimensions)
@@ -66,6 +66,7 @@
         if (otherData.length == 0) {
             data = sliceData;
             d3.select("h1").html("Mass of dwarf planets");
+            colors = d3.scale.category10();
         } else {
             data = d3.merge([sliceData, [other]]);
         }
@@ -86,6 +87,20 @@
             slice.innerRadius(0);
         } else {
             slice.innerRadius(radius / 2);
+            svg.append("circle")
+                    .style("fill", "#999")
+                    .attr("r", radius/3)
+                    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+                    .on("mouseover", function(d) {
+                        d3.select(this).style("fill", "#fdd");
+                    })
+                    .on("mouseout", function(d) {
+                        d3.select(this).style("fill", "#999");
+                    })
+                    .on("click", function(d) {
+                        // TEMPORARY!!
+                        location.reload();
+                    });
         }
 
         var labelArc = d3.svg.arc()
