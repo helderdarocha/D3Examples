@@ -103,7 +103,7 @@
         var data = histogram(dataset);
 
         xScale.domain([0, d3.max(thresholds)]);
-        yScale.domain([0, d3.max(data, function (d) {
+        yScale.domain([1, d3.max(data, function (d) {
             return d.length;
         })]);
 

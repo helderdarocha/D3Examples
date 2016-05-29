@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Udacity exercise: berkeley</title>
+    <script src="../d3/d3.js"></script>
+    <style>
+        div.graph {
+            width: 800px;
+            height: 600px;
+        }
+        svg {
+            border: solid black 1px;
+        }
+    </style>
+</head>
+<body>
+<div class="graph">
+    <h2>Men</h2>
+    <svg viewBox="0 0 800 100" id="men"></svg>
+    <h2>Women</h2>
+    <svg viewBox="0 0 800 100" id="women"></svg>
+</div>
+<script>
+    var height = 100;
+    var width  = 800;
+    var margin = 5;
+
+    var colorScale = d3.scale.category10();
+    var wScale = d3.scale.linear().range([margin, width-margin]);
+
+    var stackLayout = d3.layout.stack()
+            .values(function(d) {
+                return d.values;
+            });
+
+    var totalMaleApproved = 0, totalMaleRejected = 0;
+    var totalFemaleApproved = 0, totalFemaleRejected = 0;
+
+    function draw(gender, data) {
+
+        var svg = d3.select("#"+gender);
+        var barHeight = (height - 2 * margin) / data.length;
+
+        var totals = [];
+        for(i in data) {
+            totals.push(d3.sum(data[i].values));
+        }
+        wScale.domain([0, d3.max(totals)]);
+
+        svg.selectAll(".bar")
+                .data(stackLayout(data))
+                .enter()
+                .append("g").attr("class", "bar")
+                .each(function(d, i) {
+                    var stacked = 0;
+                    wScale.domain([0, d3.sum(d.values)]);
+                    d3.select(this)
+                            .selectAll("rect")
+                            .data(d.values)
+                            .enter().append("rect")
+                            .attr("y", function(p,j) {
+                                return margin + i * barHeight;
+                            })
+                            .attr("x", function(p,j) {
+                                pos = stacked;
+                                stacked = pos + p;
+                                return wScale(pos);
+                            })
+                            .attr("width", function(p) {
+                                return wScale(p) - margin;
+                            })
+                            .style("fill", function(p,j) { return colorScale(j)})
+                            .style("opacity", 1)
+                            .style("stroke-width", 1)
+                            .style("stroke", "white")
+                            .attr("height", barHeight - 1);
+                });
+        var perc = d3.format("%");
+
+        var totalApproved = totalMaleApproved + totalFemaleApproved;
+        var totalMale = totalMaleApproved + totalMaleRejected;
+        var totalFemale = totalFemaleApproved + totalFemaleRejected;
+        var total = totalMale + totalFemale;
+
+        var percentApproved = totalApproved / total;
+        var percentFemale = totalFemale / total;
+        var percentMale = totalMale / total;
+        var percentMaleApproved = totalMaleApproved / totalMale;
+        var percentFemaleApproved = totalFemaleApproved / totalFemale;
+
+
+        d3.select(".graph").append("p")
+                .html("Total male approved: " + totalMaleApproved + " " + perc(percentMaleApproved) + " of all men");
+        d3.select(".graph").append("p")
+                .html("Total male rejected: " + totalMaleRejected);
+        d3.select(".graph").append("p")
+                .html("Total female approved: " + totalFemaleApproved + " " + perc(percentFemaleApproved)+ " of all women");
+        d3.select(".graph").append("p")
+                .html("Total female rejected: " + totalFemaleRejected);
+        d3.select(".graph").append("p")
+                .html("Total approved: " + totalApproved + " " + perc(percentApproved));
+        d3.select(".graph").append("p")
+                .html("Total male: " + totalMale + " " + perc(percentMale));
+        d3.select(".graph").append("p")
+                .html("Total female: " + totalFemale + " " + perc(percentFemale));
+        d3.select(".graph").append("p")
+                .html("Total: " + total);
+
+    }
+
+    d3.csv("Berkeley.csv", function (dataset) {
+
+        var depts = d3.nest()
+                .key(function(d) {
+                    return d.Dept;
+                })
+                .entries(dataset);
+
+        var men = [], women = [];
+
+        for(i in depts) {
+            var newEntry = {
+                department: depts[i].key,
+                values: []
+            };
+            for(j in depts[i].values) {
+                if(depts[i].values[j].Admit == "Admitted" && depts[i].values[j].Gender == "Male") {
+                    var value = parseInt(depts[i].values[j].Freq);
+                    newEntry.values[0] = value;
+                    totalMaleApproved += value;
+                }
+                if(depts[i].values[j].Admit == "Rejected" && depts[i].values[j].Gender == "Male") {
+                    var value = parseInt(depts[i].values[j].Freq);
+                    newEntry.values[1] = value;
+                    totalMaleRejected += value;
+                }
+            }
+            men.push(newEntry);
+        }
+
+        for(i in depts) {
+            var newEntry = {
+                department: depts[i].key,
+                values: []
+            };
+            for(j in depts[i].values) {
+                if(depts[i].values[j].Admit == "Rejected" && depts[i].values[j].Gender == "Female") {
+                    var value = parseInt(depts[i].values[j].Freq);
+                    newEntry.values[0] = value;
+                    totalFemaleApproved += value;
+                }
+                if(depts[i].values[j].Admit == "Admitted" && depts[i].values[j].Gender == "Female") {
+                    var value = parseInt(depts[i].values[j].Freq);
+                    newEntry.values[1] = value;
+                    totalFemaleRejected += value;
+                }
+
+            }
+            women.push(newEntry);
+        }
+
+        draw("men", men);
+        draw("women", women);
+
+    });
+</script>
+</body>
+</html>
