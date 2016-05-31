@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Examples using matrix transforms in SVG</title>
     <script src="../d3/d3.min.js"></script>
     <style>
         .square {
@@ -13,10 +13,6 @@
         text {
             font-family: monospace;
             font-size: 9pt;
-        }
-
-        svg {
-            border: solid 1px red;
         }
         line {
             stroke-width: 1;
@@ -109,6 +105,11 @@
             .attr("transform", "matrix("+matrix+")")
     label("#plane_0_0", "⎡ 1 0 ⎤", "⎣ 0 1 ⎦", "dx = 0, dy = 0", 0);
 
+    d3.select("#plane_0_0")
+            .append("text")
+            .text("square").attr("x", -100).attr("y", 30)
+            .append("tspan")
+            .text("side = 60").attr("x", -100).attr("dy", 15);
 
 
     // 0,1 - translate x, then y
@@ -200,6 +201,13 @@
             .attr("transform", "matrix("+matrix+")");
     label("#plane_1_2", "⎡ 1 0 ⎤", "⎣ 0 1 ⎦", "dx = -30, dy = -30", 10700);
 
+    d3.select("#plane_1_2")
+            .append("text").attr("class", "note")
+            .text("center").attr("x", -100).attr("y", 30).attr("opacity", 0)
+            .append("tspan")
+            .text("side/2 = 30").attr("x", -100).attr("dy", 15);
+    d3.select("#plane_1_2 .note").transition().delay(10300).attr("opacity", 1);
+
     a = Math.cos(45 * Math.PI/180),
     b = -Math.sin(45 * Math.PI/180),
     c = Math.sin(45 * Math.PI/180),
@@ -208,7 +216,7 @@
     d3.select("#shape_1_2")
             .transition().delay(12000)
             .attr("transform", "matrix("+matrix+")");
-    label("#plane_1_2", "⎡  \u00A0cos(45)  -sin(45) ⎤", "⎣ \u00A0sin(45)  \u00A0cos(60) ⎦", "dx = -30, dy = -30", 11700);
+    label("#plane_1_2", "⎡  \u00A0cos(45)  -sin(45) ⎤", "⎣ \u00A0sin(45)  \u00A0cos(60) ⎦", "dx = -side/2, dy = -side/2", 11700);
 
     a = Math.cos(150 * Math.PI/180),
             b = -Math.sin(150 * Math.PI/180),
@@ -218,7 +226,7 @@
     d3.select("#shape_1_2")
             .transition().delay(13000)
             .attr("transform", "matrix("+matrix+")");
-    label("#plane_1_2", "⎡  \u00A0cos(150)  -sin(150) ⎤", "⎣ \u00A0sin(150)  \u00A0cos(150) ⎦", "dx = -30, dy = -30", 12700);
+    label("#plane_1_2", "⎡  \u00A0cos(150)  -sin(150) ⎤", "⎣ \u00A0sin(150)  \u00A0cos(150) ⎦", "dx = -side/2, dy = -side/2", 12700);
 
     // 2,0 - center, change origin, then rotate, then rotate again
     a = 1, b = 0, c = 0, d = 1, dx = -shapeSide/2, dy = -shapeSide/2;
@@ -252,8 +260,8 @@
             .append("text").attr("class", "note").attr("opacity", 0)
             .attr("transform", "translate(-100, 120)")
             .transition().delay(14300).attr("opacity", 1);
-    d3.select("#plane_2_0 .note").append("tspan").text("dx = 30 * (cos(30) + sin(30))");
-    d3.select("#plane_2_0 .note").append("tspan").attr("x", 0).attr("dy", 15).text("dy = 30 * (cos(30) - sin(30))");
+    d3.select("#plane_2_0 .note").append("tspan").text("dx = side/2 * (cos(30) + sin(30))");
+    d3.select("#plane_2_0 .note").append("tspan").attr("x", 0).attr("dy", 15).text("dy = side/2 * (cos(30) - sin(30))");
 
     // now rotate it a bit more
     a = Math.cos(75 * Math.PI/180),
@@ -268,8 +276,8 @@
             .attr("transform", "matrix("+matrix+")");
     label("#plane_2_0", "⎡ \u00A0cos(75) -sin(75) ⎤", "⎣ \u00A0sin(75) \u00A0cos(75) ⎦", "dx = "+format(dx)+", dy = "+format(dy), 15700);
 
-    d3.select("#plane_2_0 .note tspan:nth-child(1)").transition().delay(15300).text("dx = 30 * (cos(75) + sin(75))");
-    d3.select("#plane_2_0 .note tspan:nth-child(2)").transition().delay(15300).attr("x", 0).attr("dy", 15).text("dy = 30 * (cos(75) - sin(75))");
+    d3.select("#plane_2_0 .note tspan:nth-child(1)").transition().delay(15300).text("dx = side/2 * (cos(75) + sin(75))");
+    d3.select("#plane_2_0 .note tspan:nth-child(2)").transition().delay(15300).attr("x", 0).attr("dy", 15).text("dy = side/2 * (cos(75) - sin(75))");
 
     // 2,1 - skew up
     // 2,1 - skew up

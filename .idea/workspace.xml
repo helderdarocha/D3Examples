@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97821190-e50f-45bf-af76-4a0f9a5dd0ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Udacity_DataScience/berkeley.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svgexamples/loader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svgexamples/transforms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PartosSP/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/d3/queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/d3/topojson.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlanetaryData/asteroid_histogram.html" afterPath="$PROJECT_DIR$/PlanetaryData/asteroid_histogram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svgexamples/transforms.html" afterPath="$PROJECT_DIR$/svgexamples/transforms.html" />
     </list>
     <ignored path="D3Examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,31 +28,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mass_piechart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlanetaryData/mass_piechart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
-              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
-              <folding />
-            </state>
+      <file leaf-file-name="sp.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp_municipios/sp.json">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loader.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svgexamples/loader.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transforms.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/svgexamples/transforms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="274" column="20" selection-start-line="274" selection-start-column="20" selection-end-line="274" selection-end-column="20" />
+            <state relative-caret-position="465">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -108,6 +95,7 @@
         <option value="$PROJECT_DIR$/Udacity_DataScience/berkeley.html" />
         <option value="$PROJECT_DIR$/svgexamples/loader.html" />
         <option value="$PROJECT_DIR$/svgexamples/transforms.html" />
+        <option value="$PROJECT_DIR$/PartosSP/index.html" />
       </list>
     </option>
   </component>
@@ -121,7 +109,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
+    <option name="x" value="266" />
     <option name="y" value="23" />
     <option name="width" value="1117" />
     <option name="height" value="868" />
@@ -181,7 +169,39 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="svgexamples" />
+              <option name="myItemId" value="PartosSP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PartosSP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dados" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d3" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,17 +215,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PlanetaryData" />
-      <recent name="$PROJECT_DIR$/code-d3js4" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/arrays" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/d3" />
+      <recent name="$PROJECT_DIR$/PartosSP/dados" />
       <recent name="$PROJECT_DIR$/PlanetaryData" />
       <recent name="$PROJECT_DIR$/code/arrays" />
       <recent name="$PROJECT_DIR$/code" />
-      <recent name="$PROJECT_DIR$/selections" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PartosSP/dados/sp_municipios" />
+      <recent name="$PROJECT_DIR$/d3" />
+      <recent name="$PROJECT_DIR$/PlanetaryData" />
+      <recent name="$PROJECT_DIR$/code-d3js4" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -265,21 +287,24 @@
       <workItem from="1463771772667" duration="13518000" />
       <workItem from="1464408070724" duration="2560000" />
       <workItem from="1464469956039" duration="20034000" />
-      <workItem from="1464537309776" duration="9472000" />
+      <workItem from="1464537309776" duration="11487000" />
+      <workItem from="1464562181513" duration="33000" />
+      <workItem from="1464577588493" duration="31251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123339000" />
+    <option name="totallyTimeSpent" value="156638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="23" width="1117" height="868" extended-state="0" />
+    <frame x="266" y="23" width="1117" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22023277" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39924905" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -287,7 +312,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -311,7 +335,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/svgexamples/transforms.html</url>
-          <line>239</line>
+          <line>247</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -319,12 +343,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-sets.html" />
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-operators.html" />
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-nesting.html" />
-    <entry file="file://$PROJECT_DIR$/code/selections/d3-selection-base.html" />
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-histograms.html" />
-    <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-js-methods.html" />
     <entry file="file://$PROJECT_DIR$/code/selections/d3-selection-basic2.html" />
     <entry file="file://$PROJECT_DIR$/code/selections/d3-selection-merge_planets.html" />
     <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-ordering.html" />
@@ -439,10 +457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlanetaryData/mass_piechart.html">
+    <entry file="file://$PROJECT_DIR$/svgexamples/transforms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+        <state relative-caret-position="657">
+          <caret line="328" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="328" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -455,10 +473,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svgexamples/transforms.html">
+    <entry file="file://$PROJECT_DIR$/PlanetaryData/mass_piechart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="274" column="20" selection-start-line="274" selection-start-column="20" selection-end-line="274" selection-end-column="20" />
+        <state relative-caret-position="717">
+          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp_municipios/sp.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d3/queue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d3/topojson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp-topo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="0" column="1252" selection-start-line="0" selection-start-column="1252" selection-end-line="0" selection-end-column="1252" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2009.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding />
         </state>
       </provider>
