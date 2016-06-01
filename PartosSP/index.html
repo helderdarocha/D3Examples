@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Partos cesáreos no Estado de São Paulo - 2009</title>
+    <title>Taxa de cesarianas no Estado de São Paulo: 2000-2015</title>
     <script src="../d3/d3.min.js"></script>
     <script src="../d3/queue.js"></script>
     <script src="../d3/topojson.js"></script>
@@ -21,18 +21,26 @@
         }
 
         svg {
-            background: white;
+            background: #e1edf7;
             position: absolute;
             left: 0;
             top: 0;
         }
 
+        #map-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 500px;
+            width: 900px;
+        }
+
+        /* TEXT */
+
         text {
             font-family: sans-serif;
         }
-        .entry text {
-            font-size: 9pt;
-        }
+
         text.tooltip {
             font-size: 9pt;
             fill: black;
@@ -49,13 +57,12 @@
             font-size: 12pt;
         }
 
-        .enabled {
-            fill: red;
-            cursor: pointer;
-        }
-
         text.year {
+            font-size: 18px;
             fill: black;
+        }
+        text.source {
+            font-size: 9px;
         }
 
         tspan {
@@ -65,9 +72,25 @@
         tspan.selected {
             font-weight: bold;
             fill: red;
-            font-size: 24px;
+            font-size: 26px;
             cursor: default;
         }
+
+        .enabled {
+            fill: red;
+            cursor: pointer;
+        }
+
+        .entry rect {
+            stroke: orange;
+            stroke-width: .2;
+        }
+
+        .entry text {
+            font-size: 9px;
+        }
+
+        /* MAP ELEMENT SELECTED VIA TABLE */
 
         g.selected path {
             opacity: 1;
@@ -76,6 +99,8 @@
             stroke: white;
             stroke-opacity: 1;
         }
+
+        /* TABLES */
 
         caption {
             font-size: 10pt;
@@ -94,20 +119,12 @@
             background: lightblue;
         }
 
-        #map-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 500px;
-            width: 900px;
-        }
-
         td {
             padding: 0 10px;
         }
 
         #min {
-            bottom: 20px;
+            bottom: 50px;
             left: 20px;
         }
 
@@ -130,6 +147,8 @@
     var height = 500;
     var yearIdx = 0;
     var dados, mapas;
+    var minYear = 2000;
+    var maxYear = 2015;
 
     // Scales
     var opacity = d3.scale.linear()
@@ -146,13 +165,13 @@
 
     var decimal2d = d3.format(".2f");
 
-    queue().defer(d3.csv, "dados/partos_cesareos_2000_a_2009.csv")
+    queue().defer(d3.csv, "dados/partos_cesareos_2000_a_2015.csv")
             .defer(d3.json, "dados/sp-topo.json")
             .await(function (error, csvData, jsonData) {
 
                 var arrayDados = function (d) {
                     var array = [];
-                    for (var ano = 2000; ano <= 2009; ano++) {
+                    for (var ano = minYear; ano <= maxYear; ano++) {
                         var obj = {
                             ano: ano,
                             cesareas: parseNumber(d["Parto Cesárea " + ano]),
@@ -236,23 +255,35 @@
         svg.append("text")
                 .attr("class", "title")
                 .text("Taxa de cesarianas no Estado de São Paulo")
-                .attr("x", 10).attr("y", 30)
+                .attr("x", 20).attr("y", 30)
                 .append("tspan")
-                .text(" (2000 a 2009)");
+                .text(" (2000 a 2015)");
+
+        // Source
+        svg.append("text")
+                .attr("class", "source")
+                .attr("y", 40)
+                .selectAll("tspan")
+                .data(["Fonte:", "Secretaria Estadual de Saúde/SP - FSEADE/SINASC", "http://www.saude.sp.gov.br/links/matriz"])
+                .enter().append("tspan")
+                .attr("dy", 10).attr("x", 20)
+                .text(function(d) {
+                    return d;
+                });
 
         // Year labels
         svg.append("text")
                 .attr("class", "year")
                 .style("text-anchor", "middle")
-                .attr("transform", "translate(600, 480)")
+                .attr("transform", "translate(445, 490)")
                 .selectAll("tspan")
-                .data(d3.range(2000, 2010))
+                .data(d3.range(minYear, maxYear + 1))
                 .enter()
-                .append("tspan")
+                .append("tspan").attr("dx", 10)
                 .attr("id", function(d) { return "year-label-"+d; })
-                .text(function(d) { return " " + d + " "; })
+                .text(function(d) { return d; })
                 .on("mouseover", function(d) {
-                    if((2000+yearIdx) != d) {
+                    if((minYear + yearIdx) != d) {
                         d3.select(this).style("text-decoration", "underline");
                     }
                 })
@@ -260,7 +291,7 @@
                     d3.select(this).style("text-decoration", "none");
                 })
                 .on("click", function(d) {
-                    yearIdx = d - 2000;
+                    yearIdx = d - minYear;
                     update();
                 });
 
@@ -298,10 +329,10 @@
         // Arrows
         svg.append("polygon").attr("id", "up")
                 .attr("points", "0,0 9,9 0,18")
-                .attr("transform", "translate(812, 463)")
+                .attr("transform", "translate(870, 472)")
                 .attr("fill", "gray").attr("opacity", .5)
                 .on("click", function(d) {
-                    if (yearIdx < 9) {
+                    if (yearIdx < (maxYear - minYear)) {
                         ++yearIdx;
                         update();
                     }
@@ -309,7 +340,7 @@
 
         svg.append("polygon").attr("id", "down")
                 .attr("points", "9,0 0,9 9,18")
-                .attr("transform", "translate(379, 463)")
+                .attr("transform", "translate(30, 472)")
                 .attr("fill", "gray").attr("opacity", .5)
                 .on("click", function(d) {
                     if (yearIdx > 0) {
@@ -398,13 +429,13 @@
                 .on("mouseout", function(d) {
                     d3.select(this).classed("selected", false);
                     d3.select("#mun-"+d.value.id).classed("selected", false);
-                })
+                });
     }
 
     function update() {
 
         d3.select("#up").filter(function(d) {
-            if (yearIdx == 9) {
+            if (yearIdx == (maxYear - minYear)) {
                 d3.select(this).classed("enabled", false);
             } else {
                 d3.select(this).classed("enabled", true);
@@ -420,24 +451,27 @@
         });
 
         d3.selectAll(".year tspan").classed("selected", false);
-        d3.selectAll("#year-label-200"+yearIdx).classed("selected", true);
+        d3.selectAll("#year-label-"+(minYear + yearIdx)).classed("selected", true);
 
-        var max10 = dados.entries().sort(function (a, b) {
+        var entries = dados.entries().filter(function(d) {
+            return !(d.key == "3588888" || d.key == "3599999");
+        });
+
+        var max10 = entries.sort(function (a, b) {
             return d3.descending(a.value.dados[yearIdx].taxa, b.value.dados[yearIdx].taxa);
         }).slice(0, 10);
 
-        var min10 = dados.entries().sort(function (a, b) {
+        var min10 = entries.sort(function (a, b) {
             return d3.ascending(a.value.dados[yearIdx].taxa, b.value.dados[yearIdx].taxa);
         }).slice(0, 10);
 
-
-        avg = d3.mean(dados.entries(), function(d) {
-            return d.value.dados[yearIdx].taxa;
-        });
+        var state = dados.entries().filter(function(d) {
+            return d.key == "3599999";
+        })[0].value.dados;
 
         d3.select("#avg")
                 .text(function(d) {
-                    return "Média estadual: " + decimal2d(avg) + "%";
+                    return "Média estadual: " + decimal2d(state[yearIdx].taxa) + "%";
                 });
 
         d3.selectAll("table").style("opacity", 1);

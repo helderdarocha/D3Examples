@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97821190-e50f-45bf-af76-4a0f9a5dd0ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PartosSP/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/d3/queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/d3/topojson.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svgexamples/transforms.html" afterPath="$PROJECT_DIR$/svgexamples/transforms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PartosSP/index.html" afterPath="$PROJECT_DIR$/PartosSP/index.html" />
     </list>
     <ignored path="D3Examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="171" column="47" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -289,12 +286,13 @@
       <workItem from="1464469956039" duration="20034000" />
       <workItem from="1464537309776" duration="11487000" />
       <workItem from="1464562181513" duration="33000" />
-      <workItem from="1464577588493" duration="31251000" />
+      <workItem from="1464577588493" duration="31643000" />
+      <workItem from="1464732918385" duration="6518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156638000" />
+    <option name="totallyTimeSpent" value="163548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="266" y="23" width="1117" height="868" extended-state="0" />
@@ -304,7 +302,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39924905" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -312,6 +309,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39924905" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -343,7 +341,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/selections/d3-selection-basic2.html" />
     <entry file="file://$PROJECT_DIR$/code/selections/d3-selection-merge_planets.html" />
     <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-ordering.html" />
     <entry file="file://$PROJECT_DIR$/code/arrays/d3-array-associative.html" />
@@ -469,7 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
           <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -490,7 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -498,7 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -506,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="0" column="1252" selection-start-line="0" selection-start-column="1252" selection-end-line="0" selection-end-column="1252" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,14 +506,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2015.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="646" column="7" selection-start-line="646" selection-start-column="0" selection-end-line="646" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="330">
+          <caret line="171" column="47" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
           <folding />
         </state>
       </provider>
