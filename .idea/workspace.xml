@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97821190-e50f-45bf-af76-4a0f9a5dd0ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PartosSP/index.html" afterPath="$PROJECT_DIR$/PartosSP/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2009.csv" afterPath="$PROJECT_DIR$/Cloropleth/dados/partos_cesareos_2000_a_2009.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2015.csv" afterPath="$PROJECT_DIR$/Cloropleth/dados/partos_cesareos_2000_a_2015.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2015.xlsx" afterPath="$PROJECT_DIR$/Cloropleth/dados/partos_cesareos_2000_a_2015.xlsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/percentual_de_partos_cesareos_2000_a_2009.xls" afterPath="$PROJECT_DIR$/Cloropleth/dados/percentual_de_partos_cesareos_2000_a_2009.xls" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp-topo.json" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp-topo.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/35MUE250GC_SIR.cpg" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/35MUE250GC_SIR.cpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/35MUE250GC_SIR.dbf" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/35MUE250GC_SIR.dbf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/35MUE250GC_SIR.prj" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/35MUE250GC_SIR.prj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/35MUE250GC_SIR.shp" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/35MUE250GC_SIR.shp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/35MUE250GC_SIR.shx" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/35MUE250GC_SIR.shx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/dados/sp_municipios/sp.json" afterPath="$PROJECT_DIR$/Cloropleth/dados/sp_municipios/sp.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PartosSP/index.html" afterPath="$PROJECT_DIR$/Cloropleth/index.html" />
     </list>
     <ignored path="D3Examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,17 +36,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="sp.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp_municipios/sp.json">
+        <entry file="file://$PROJECT_DIR$/Cloropleth/dados/sp_municipios/sp.json">
           <provider selected="true" editor-type-id="LargeFileEditor">
             <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
+        <entry file="file://$PROJECT_DIR$/Cloropleth/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="295" column="19" selection-start-line="295" selection-start-column="19" selection-end-line="295" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="521" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -165,7 +176,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PartosSP" />
+              <option name="myItemId" value="d3" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -179,25 +190,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PartosSP" />
+              <option name="myItemId" value="Cloropleth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D3Examples" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cloropleth" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D3Examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D3Examples" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="d3" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,18 +297,18 @@
       <workItem from="1464537309776" duration="11487000" />
       <workItem from="1464562181513" duration="33000" />
       <workItem from="1464577588493" duration="31643000" />
-      <workItem from="1464732918385" duration="6630000" />
+      <workItem from="1464732918385" duration="7023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163660000" />
+    <option name="totallyTimeSpent" value="164053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="266" y="23" width="1117" height="868" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22023277" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22023277" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -475,7 +486,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp_municipios/sp.json">
+    <entry file="file://$PROJECT_DIR$/Cloropleth/dados/sp_municipios/sp.json">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state />
       </provider>
@@ -494,21 +505,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartosSP/dados/sp-topo.json">
+    <entry file="file://$PROJECT_DIR$/Cloropleth/dados/sp-topo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="0" column="1252" selection-start-line="0" selection-start-column="1252" selection-end-line="0" selection-end-column="1252" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2009.csv">
+    <entry file="file://$PROJECT_DIR$/Cloropleth/dados/partos_cesareos_2000_a_2009.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartosSP/dados/partos_cesareos_2000_a_2015.csv">
+    <entry file="file://$PROJECT_DIR$/Cloropleth/dados/partos_cesareos_2000_a_2015.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
           <caret line="646" column="7" selection-start-line="646" selection-start-column="0" selection-end-line="646" selection-end-column="7" />
@@ -516,10 +527,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartosSP/index.html">
+    <entry file="file://$PROJECT_DIR$/Cloropleth/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="295" column="19" selection-start-line="295" selection-start-column="19" selection-end-line="295" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="521" selection-end-column="7" />
           <folding />
         </state>
       </provider>
