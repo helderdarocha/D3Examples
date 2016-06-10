@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+
+    <style>
+        rect.acum2015 {fill: red; stroke: white;}
+        rect.acum2016 {fill: blue; stroke: white;}
+    </style>
+</head>
+<body>
+
+
+<script>
+    var height = 500, width = 500;
+    d3.csv("201603totalestado.csv", function(csvdata) {
+        var data = [];
+        for(var i = 0; i < csvdata.length; i++) {
+            var entry = {};
+            entry.crime = csvdata[i]["Titulo"];
+            entry.acum2015 = +csvdata[i]["Acum-2015"];
+            if(entry.acum2015 < 0) console.log("ERROR IN DATA - " + entry.crime)
+            entry.acum2016 = +csvdata[i]["Acum-2016"];
+            if(entry.acum2016 < 0) console.log("ERROR IN DATA - " + entry.crime)
+            data.push(entry);
+        }
+
+        console.log(data);
+        drawLine(data);
+    });
+
+    function drawLine(data) {
+        d3.select("body").append("svg")
+                .attr("viewBox", "0 0 500 500")
+                .attr({width: 500, height: 500});
+
+
+        var vScale = d3.scale.linear()
+                .domain([0, data.length])
+                .range([50, height - 50]);
+
+        var hScale = d3.scale.linear()
+                .range([200, width - 50])
+                .domain([0, d3.max(data, function(d) {
+                    return d.acum2016 > d.acum2015 ? d.acum2016 : d.acum2015;
+                })]);
+
+        var entry = d3.select("svg")
+                .selectAll(".bars")
+                .data(data)
+                .enter()
+                .append("g").attr("class", "bars")
+                .attr("transform", function(d, i) {
+                    console.log(i)
+                    return "translate(50, "+vScale(i)+")"
+                });
+
+        entry.append("rect").attr("class", "acum2015")
+                .attr("width", function(d) {
+                    return hScale(d.acum2015);
+                })
+                .attr("height", function(d, i) {
+                    return height/data.length * .5;
+                })
+                .attr("y", function(d, i) {
+                    return height/data.length * .5;
+                });
+
+        entry.append("rect").attr("class", "acum2016")
+                .attr("width", function(d) {
+                    return hScale(d.acum2016);
+                })
+                .attr("height", function(d, i) {
+                    return height/data.length * .5;
+                })
+                .attr("y", function(d, i) {
+                    return height/data.length * .5 + 5;
+                });
+    }
+
+
+</script>
+
+</body>
+</html>

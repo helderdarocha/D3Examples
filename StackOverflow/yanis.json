@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "id1",
+    "createdAt": "05/31/2016",
+    "numberOfWords": 996
+  },
+  {
+    "_id": "id2",
+    "createdAt": "04/15/2016",
+    "numberOfWords": 20
+  },
+  {
+    "_id": "id3",
+    "createdAt": "02/22/2015",
+    "numberOfWords": 350
+  }
+]
